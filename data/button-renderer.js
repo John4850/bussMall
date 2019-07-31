@@ -1,11 +1,9 @@
-import ProductSet from './product-set.js';
+function renderButton(product, buttonDisplay) {
 
-function renderButton(ProductSet, product) {
-   //make a label,
-   const label = document.createElement('label');
-   input.value = product.id;
-   // make a button, 
-   //add id to button
+    const input = buttonDisplay.querySelector('input');
+    input.value = product.id;
+    const img = buttonDisplay.querySelector('img');
+    img.src = product.image;
 
 
 

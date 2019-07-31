@@ -50,7 +50,7 @@ const productList = [
     {
         id: 'dog-duck',
         name: 'Duck Muzzle for Dogs',
-        image: 'dog-duck.jpg',
+        image: 'assets/dog-duck.jpg',
         description: 'A fun and friendly device for not so friendly dogs.',
     },
     {
@@ -86,7 +86,7 @@ const productList = [
     {
         id: 'sweep',
         name: 'Baby Swiffer',
-        image: 'assets/sweept.png',
+        image: 'assets/sweep.png',
         description: 'Make your child help out with the chores at an early age. . . ',
     },
     {
