@@ -33,16 +33,9 @@ input {
 input:checked + .radio-image {
     border: 5px solid red;
 }
-/* #button{
-    height: 250px;
-    width: 250px;
-} */
 .radio-image {
     border: 5px solid royalblue;
     border-radius: 100%;
     width: 200px;
     height: 200px;
-}
-#button:hover {
-    transform: translate3d(1px, -1px, 0);
 }
