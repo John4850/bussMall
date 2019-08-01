@@ -1,7 +1,7 @@
 import productList from './product-list.js';
 
 const PRODUCT_KEY = 'PRODUCTS';
-
+const SCORE_CARD_KEY = 'score-card';
 const store = {
     storage: window.localStorage,
     save(key, item) {
@@ -20,7 +20,14 @@ const store = {
             products = productList;
         }
         return products;
-    }
+    },
+    getScoreCard() {
+        let ScoreCard = store.get(SCORE_CARD_KEY);
+        if(!ScoreCard) {
+            ScoreCard = [];
+        }
+        return ScoreCard;
+    },
     
 };
 export default store;
