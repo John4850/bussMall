@@ -21,5 +21,6 @@ const store = {
         }
         return products;
     }
+    
 };
 export default store;

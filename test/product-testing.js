@@ -36,17 +36,3 @@ test ('threeRandomProducts returns three unique products', assert => {
     assert.notEqual(threeRandomProducts[2], threeRandomProducts[1]);
     assert.notEqual(threeRandomProducts[0], threeRandomProducts[2]);
 });
-// test ('buttonRenderer rendors an HTML button with attributes', assert => {
-//     const product1 = {
-//         id: 'bag',
-//         name: 'Couture Luggage',
-//         image: '/assets/bag.jpg',
-//         description: 'Stylish suitcase that highlights your love of sci-fi fandoms.',
-//     };
-//     const dom = renderButton(product1);    
-//     const expected = '<label id="button"><input type="radio" name="button" value="bag"><img class="radio-image" src="/assets/bag.jpg"></label>';
-//     const result = dom.outerHTML;
-
-//     assert.deepEqual(result, expected);
-
-// });
