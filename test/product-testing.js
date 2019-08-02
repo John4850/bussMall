@@ -36,3 +36,8 @@ test ('threeRandomProducts returns three unique products', assert => {
     assert.notEqual(threeRandomProducts[2], threeRandomProducts[1]);
     assert.notEqual(threeRandomProducts[0], threeRandomProducts[2]);
 });
+test ('Records User Choice in data table at end of round', assert => {
+
+
+
+});

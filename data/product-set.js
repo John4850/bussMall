@@ -9,9 +9,6 @@ class ProductSet {
         const product = this.list[index];
         return product;
     }
-    hasProducts() {
-        return this.list.length > 0;
-    }
     removeById(productId) {
         const list = this.list;
         for(let i = 0; i < list.length; i++) {
