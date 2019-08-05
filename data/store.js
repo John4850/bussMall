@@ -59,12 +59,15 @@ const store = {
                 };
                 scoreCard.push(newShownProduct);
             }
-            const scoredProduct = findById(scoreCard, userChoice);
-            if(scoredProduct)
-                scoredProduct.quantityPicked++;
+            //update quantityPicked with userChoice
+            const scoredProduct = findById(userChoice);
+            shownProduct.quantityPicked++;
+            console.log(scoredProduct + 'this is scoredProduct');
+            
+
         
         }
-        console.log(scoreCard + 'scorecard');
+        console.log(scoreCard + 'this is scoreCard');
         const roundPick = findById(scoreCard, userChoice);
         roundPick.quantityPicked++;
         store.save(SCORE_CARD_KEY, scoreCard);
