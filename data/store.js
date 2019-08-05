@@ -39,7 +39,6 @@ const store = {
         }
     },
     writeScore(displayedProducts, userChoice) {
-        console.log(displayedProducts, 'and', userChoice);
         // gets a scorecard, or makes it if none exist,
         const scoreCard = store.getScoreCard();
         
@@ -60,14 +59,14 @@ const store = {
                 scoreCard.push(newShownProduct);
             }
             //update quantityPicked with userChoice
-            const scoredProduct = findById(userChoice);
-            shownProduct.quantityPicked++;
-            console.log(scoredProduct + 'this is scoredProduct');
+            // const scoredProduct = findById(userChoice);
+            // shownProduct.quantityPicked++;
+            // console.log(scoredProduct + 'this is scoredProduct');
             
 
         
         }
-        console.log(scoreCard + 'this is scoreCard');
+        // console.log(scoreCard + 'this is scoreCard');
         const roundPick = findById(scoreCard, userChoice);
         roundPick.quantityPicked++;
         store.save(SCORE_CARD_KEY, scoreCard);

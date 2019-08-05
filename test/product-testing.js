@@ -1,7 +1,6 @@
 import store from '../data/store.js';
 import productList from '../data/product-list.js';
 import ProductSet from '../data/product-set.js';
-import renderButton from '../data/button-renderer.js';
 
 const test = QUnit.test;
 store.storage = window.sessionStorage;

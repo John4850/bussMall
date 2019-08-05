@@ -19,23 +19,19 @@ renderButton(randomProducts[0], button1);
 renderButton(randomProducts[1], button2);
 renderButton(randomProducts[2], button3);
 
-// push Displayed array to be saved?
+// push Displayed array to be saved
 let displayedProducts = [];
 for(let i = 0; i < 3; i++) {
     displayedProducts.push(randomProducts[i].id);
 }
-console.log(displayedProducts);
+    
 // Button Click, totals data from round, and sends to next round.
 form.addEventListener('submit', () => {
     event.preventDefault();
     
     const formData = new FormData(form);
     const userChoice = formData.get('button');
-    // console.log('user-choice', userChoice);
-    //score
-    store.writeScore(displayedProducts, userChoice);
-
-    //Make a turn Counter
+    //Update turn Counter
     roundCount++;
     if(roundCount < 25) {
         //reset images
@@ -46,17 +42,10 @@ form.addEventListener('submit', () => {
         renderButton(randomProducts2[0], button1);
         renderButton(randomProducts2[1], button2);
         renderButton(randomProducts2[2], button3);
+        //score
+        store.writeScore(displayedProducts, userChoice);
     }
     else {
-        window.location = 'results.html';
+        window.location.assign('results.html');
     }
-    
-    
-    
-    
-    
-    // console.log(resultsFromRound, 'results from Round');
-    // console.log(displayedProducts, 'displayed products');
-    // console.log(userChoice, 'user choice');
-    
 });
