@@ -47,21 +47,24 @@ const store = {
         //update qty for each item shown
         for(let i = 0; i < displayedProducts.length; i++) {
             const displayedProduct = displayedProducts[i];
-            const scoredProduct = findById(scoreCard, displayedProduct);
-            if(scoredProduct) {
-                scoredProduct.quantityShown++;
+            const shownProduct = findById(scoreCard, displayedProduct);
+            if(shownProduct) {
+                shownProduct.quantityShown++;
             }
             else {
-                const newScoredProduct = {
+                const newShownProduct = {
                     id: displayedProduct,
                     quantityShown: 1,
-                    quantityPicked: 0
+                    quantityPicked: 0,
                 };
-                scoreCard.push(newScoredProduct);
+                scoreCard.push(newShownProduct);
             }
+            const scoredProduct = findById(scoreCard, userChoice);
+            if(scoredProduct)
+                scoredProduct.quantityPicked++;
         
         }
-        console.log(scoreCard);
+        console.log(scoreCard + 'scorecard');
         const roundPick = findById(scoreCard, userChoice);
         roundPick.quantityPicked++;
         store.save(SCORE_CARD_KEY, scoreCard);

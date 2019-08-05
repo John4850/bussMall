@@ -36,8 +36,16 @@ test ('threeRandomProducts returns three unique products', assert => {
     assert.notEqual(threeRandomProducts[2], threeRandomProducts[1]);
     assert.notEqual(threeRandomProducts[0], threeRandomProducts[2]);
 });
-test ('Records User Choice in data table at end of round', assert => {
+// test ('Records User Choice in data table at end of round', assert => {
+//     // const products = new ProductSet(productList);
+    
+//     const userChoice = 'shark';
+//     const displayedProducts = ['shark', 'unicorn', 'chair'];
 
+//     let expected = [{ id: 'shark', quantityShown: 1, quantityPicked: 1 }, { id: 'unicorn', quantityShown: 1, quantityPicked: 0 }, { id: 'chair', quantityShown: 1, quantityPicked: 0 }];
 
+//     let scoreCard = store.writeScore(displayedProducts, userChoice);
 
-});
+//     assert.deepEqual(scoreCard, expected);
+//     console.log(scoreCard);
+// });
